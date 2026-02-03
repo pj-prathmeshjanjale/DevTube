@@ -8,6 +8,7 @@ const passport = require('./config') // Import configured passport
 const session = require('express-session')
 const express = require('express')
 const socketio = require('socket.io')
+const MongoStore = require('connect-mongo')
 
 // Create an Express application
 const app = express()
@@ -47,7 +48,15 @@ app.use(express.json())
 // Parse URL-encoded request bodies
 app.use(express.urlencoded({ extended: true }))
 // Set up session management with a secret key
-app.use(session({ secret: process.env.SESSION_SECRET || 'secret', resave: false, saveUninitialized: false }))
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'secret',
+  resave: false,
+  saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI,
+    ttl: 14 * 24 * 60 * 60 // 14 days
+  })
+}))
 // Initialize Passport for authentication
 app.use(passport.initialize())
 // Enable persistent login sessions
