@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0b0b0b;
+            color: #f1f1f1;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        object {
+            margin-bottom: 20px;
+            max-width: 90%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <object id="svg-object" type="image/svg+xml" data="./404.svg"></object>
+        <h1>This feature is coming soon</h1>
+    </div>
+    <script>
+        document.getElementById('svg-object').addEventListener('load', function () {
+            var svgDoc = this.contentDocument
+            svgDoc.querySelector('.the-box')?.addEventListener('click', () => window.location.href = '/')
+        });
+    </script>
+</body>
+
+</html>
