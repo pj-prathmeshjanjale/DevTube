@@ -1,9 +1,9 @@
-# DevTube 📺
+# DevTube 
 
 **DevTube** is a scalable video sharing platform built with the MERN stack (MongoDB, Express, Node.js) and EJS, designed to deliver a high-performance video streaming experience. It leverages modern cloud infrastructure for media handling and authentication.
 
-## 🚀 Live Demo
-[Check out DevTube on Render](https://devtube.onrender.com) *(Replace with your actual URL)*
+##  Live Demo
+[Check out DevTube on Render](https://devtube-w9ub.onrender.com/) *
 
 ## ✨ Key Features
 
@@ -19,7 +19,7 @@
 *   **Channel Analytics**: Dashboard for creators to track video performance.
 *   **Responsive UI**: Mobile-first design using custom CSS and EJS templating.
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 *   **Backend**: Node.js, Express.js for RESTful APIs.
 *   **Database**: MongoDB (Atlas) with Mongoose for schema modeling.
@@ -29,14 +29,14 @@
 *   **Real-time**: Socket.io.
 *   **Deployment**: Render (Web Service).
 
-## 🗂️ System Architecture
+##  System Architecture
 
 1.  **Client**: Browser requests are handled by the Express server using EJS views.
 2.  **Server**: Node.js handles API logic, authentication, and database interactions.
 3.  **Media**: Uploads are processed not by the server disk but streamed directly to external storage providers (ImageKit/BunnyCDN) to ensure scalability and statelessness.
 4.  **Database**: Metadata (users, video links, comments) is stored in MongoDB.
 
-## 📦 Local Installation
+##  Local Installation
 
 To run this project locally:
 
@@ -76,15 +76,7 @@ To run this project locally:
     ```
     Visit `http://localhost:3000` in your browser.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## 👤 Author
+##  Author
 
 **Prathamesh Janjale**
 *   [GitHub](https://github.com/pj-prathmeshjanjale)
-*   [LinkedIn](https://linkedin.com/in/prathmeshjanjale) *(Add your LinkedIn URL if you have one)*
-
----
-*Built with ❤️ for the developer community.*
